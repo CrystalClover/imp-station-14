@@ -234,4 +234,4 @@
         offset: "0, 0.15"
     sprite: _Impstation/Clothing/Head/Hats/propellerhat.rsi
   - type: UseDelay
-    delay: 0.25
+    delay: 0.025
