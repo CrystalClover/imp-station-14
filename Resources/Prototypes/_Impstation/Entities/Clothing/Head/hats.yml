@@ -218,3 +218,14 @@
     tags:
     - ClothMade
     - WhitelistChameleon
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatPropeller
+  name: Propeller Hat
+  description: "A colourful piece of headwear with a functional propeller!"
+  components:
+  - type: Sprite
+    sprite: _Impstation/Clothing/Head/Hats/propellerhat.rsi
+  - type: Clothing
+    sprite: _Impstation/Clothing/Head/Hats/propellerhat.rsi
