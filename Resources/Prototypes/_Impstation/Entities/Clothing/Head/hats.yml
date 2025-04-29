@@ -223,9 +223,15 @@
   parent: ClothingHeadBase
   id: ClothingHeadHatPropeller
   name: Propeller Hat
-  description: "A colourful piece of headwear with a functional propeller!"
+  description: "A colourful piece of headwear with a functional propeller! How whimsical!"
   components:
   - type: Sprite
     sprite: _Impstation/Clothing/Head/Hats/propellerhat.rsi
   - type: Clothing
+    clothingVisuals:
+      head:
+      - state: equipped-HELMET
+        offset: "0, 0.15"
     sprite: _Impstation/Clothing/Head/Hats/propellerhat.rsi
+  - type: UseDelay
+    delay: 0.25
