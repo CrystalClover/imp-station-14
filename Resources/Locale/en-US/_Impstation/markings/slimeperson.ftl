@@ -97,6 +97,9 @@ marking-SlimeBonehandright-bone = Floating Bones (Right Hand)
 
 # HeadTop
 
+marking-SlimeFloppedAntennae = Antennae (Flopped)
+marking-SlimeFloppedAntennae-flopped = Antennae (Flopped)
+
 # Tail
 
 # RArmExtension

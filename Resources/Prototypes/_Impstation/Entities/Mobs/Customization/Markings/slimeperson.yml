@@ -283,6 +283,17 @@
 
 # HeadTop
 
+- type: marking
+  id: FloppedAntennae
+  bodyPart: HeadTop
+  markingCategory: HeadTop
+  speciesRestriction: [ SlimePerson ]
+  forcedColoring: true
+  followSkinColor: true
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/SlimePerson/headtop.rsi
+    state: floppedantennae
+
 # Tail
 
 # RArmExtension
