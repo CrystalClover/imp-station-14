@@ -27,6 +27,8 @@
     snapCardinals: true
   - type: Climbable
   - type: Clickable
+  - type: StealTarget
+    stealGroup: Altar
 
 - type: entity
   id: AltarNanotrasen
@@ -64,8 +66,6 @@
             max: 3
       - !type:DoActsBehavior
         acts: [ "Destruction" ]
-  - type: StealTarget
-    stealGroup: AltarNanotrasen
 
 - type: entity
   id: AltarChaos
@@ -248,12 +248,10 @@
   - type: Sprite
     sprite: Structures/Furniture/Altars/Gods/convertaltar.rsi
     layers:
-    - state: convertaltar
-    - state: lightning
-      shader: unshaded
+    - state: burden
   - type: Icon
     sprite: Structures/Furniture/Altars/Gods/convertaltar.rsi
-    state: convertaltar
+    state: burden
   - type: PointLight
     radius: 1.5
     energy: 1

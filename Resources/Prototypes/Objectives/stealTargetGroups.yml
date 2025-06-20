@@ -329,8 +329,8 @@
     state: booze
 
 - type: stealTargetGroup
-  id: AltarNanotrasen
-  name: steal-target-groups-altar-nanotrasen
+  id: Altar
+  name: steal-target-groups-altar
   sprite:
     sprite: Structures/Furniture/Altars/Gods/nanotrasen.rsi
     state: nanotrasen

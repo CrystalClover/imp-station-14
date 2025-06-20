@@ -395,12 +395,12 @@
 
 - type: entity
   parent: BaseThiefStealStructureObjective
-  id: AltarNanotrasenStealObjective
+  id: AltarStealObjective
   components:
   - type: NotJobRequirement
     job: Chaplain
   - type: StealCondition
-    stealGroup: AltarNanotrasen
+    stealGroup: Altar
   - type: Objective
     difficulty: 0.5
 
