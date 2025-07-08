@@ -1,0 +1,268 @@
+- type: entity
+  parent: BaseItem
+  id: BaseBalloon
+  abstract: true
+  components:
+  - type: ItemToggle
+    soundActivate:
+      path: /Audio/Weapons/ebladeon.ogg
+    soundDeactivate:
+      path: /Audio/Weapons/ebladeoff.ogg
+    onActivate: false
+    onUse: false
+  - type: Appearance
+  - type: Sprite
+    sprite: _Impstation/Objects/Fun/balloons.rsi
+    layers:
+    - state: deflated
+      map: [ "enum.ToggleableVisuals.Layer" ]
+    - state: Shine
+      visible: false
+      map: [ "Details" ]
+    - state: String
+      visible: false
+      map: [ "Details" ]
+  - type: ComponentToggler
+    components:
+    - type: MovementIgnoreGravity
+      gravityState: true
+    - type: Physics
+      bodyStatus: InAir
+    - type: FloatingVisuals
+  - type: ToggleableVisuals
+    spriteLayer: enum.ToggleableVisuals.Layer
+  - type: GenericVisualizer
+    visuals:
+      enum.ToggleableVisuals.Enabled:
+        enum.ToggleableVisuals.Layer:
+          True: {state: inflated}
+          False: {state: deflated}
+        Details:
+          True: {visible: true}
+          False: {Visible: false}
+  - type: Damageable
+    damageContainer: Inorganic
+  - type: Tag
+    tags:
+    - Balloon
+  - type: MovementIgnoreGravity
+    gravityState: true
+  - type: Physics
+    bodyStatus: InAir
+  - type: FloatingVisuals
+
+- type: entity
+  parent: BaseBalloon
+  id: BalloonRed
+  name: red balloon
+  description: A plain red balloon.
+  components:
+  - type: Sprite
+    sprite: _Impstation/Objects/Fun/balloons.rsi
+    layers:
+    - state: icon
+      color: "#eb0c07"
+    - state: string-icon
+    - state: shine-icon
+    noRot: true
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#eb0c07"
+      - state: string-inhand-left
+      - state: shine-inhand-left
+      right:
+      - state: inhand-right
+        color: "#eb0c07"
+      - state: string-inhand-right
+      - state: shine-inhand-right
+
+- type: entity
+  parent: BaseBalloon
+  id: BalloonOrange
+  name: orange balloon
+  description: A plain orange balloon.
+  components:
+  - type: Sprite
+    sprite: _Impstation/Objects/Fun/balloons.rsi
+    layers:
+    - state: icon
+      color: "#ff7300"
+    - state: string-icon
+    - state: shine-icon
+    noRot: true
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#ff7300"
+      - state: string-inhand-left
+      - state: shine-inhand-left
+      right:
+      - state: inhand-right
+        color: "#ff7300"
+      - state: string-inhand-right
+      - state: shine-inhand-right
+
+- type: entity
+  parent: BaseBalloon
+  id: BalloonYellow
+  name: yellow balloon
+  description: A plain yellow balloon.
+  components:
+  - type: Sprite
+    sprite: _Impstation/Objects/Fun/balloons.rsi
+    layers:
+    - state: icon
+      color: "#ffe14d"
+    - state: string-icon
+    - state: shine-icon
+    noRot: true
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#ffe14d"
+      - state: string-inhand-left
+      - state: shine-inhand-left
+      right:
+      - state: inhand-right
+        color: "#ffe14d"
+      - state: string-inhand-right
+      - state: shine-inhand-right
+
+- type: entity
+  parent: BaseBalloon
+  id: BalloonBlue
+  name: blue balloon
+  description: A plain blue balloon.
+  components:
+  - type: Sprite
+    sprite: _Impstation/Objects/Fun/balloons.rsi
+    layers:
+    - state: icon
+      color: "#3285ba"
+    - state: string-icon
+    - state: shine-icon
+    noRot: true
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#3285ba"
+      - state: string-inhand-left
+      - state: shine-inhand-left
+      right:
+      - state: inhand-right
+        color: "#3285ba"
+      - state: string-inhand-right
+      - state: shine-inhand-right
+
+- type: entity
+  parent: BaseBalloon
+  id: BalloonGreen
+  name: green balloon
+  description: A plain green balloon.
+  components:
+  - type: Sprite
+    sprite: _Impstation/Objects/Fun/balloons.rsi
+    layers:
+    - state: icon
+      color: "#51d63a"
+    - state: string-icon
+    - state: shine-icon
+    noRot: true
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#51d63a"
+      - state: string-inhand-left
+      - state: shine-inhand-left
+      right:
+      - state: inhand-right
+        color: "#51d63a"
+      - state: string-inhand-right
+      - state: shine-inhand-right
+
+- type: entity
+  parent: BaseBalloon
+  id: BalloonPurple
+  name: purple balloon
+  description: A plain purple balloon.
+  components:
+  - type: Sprite
+    sprite: _Impstation/Objects/Fun/balloons.rsi
+    layers:
+    - state: icon
+      color: "#8c1eec"
+    - state: string-icon
+    - state: shine-icon
+    noRot: true
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#8c1eec"
+      - state: string-inhand-left
+      - state: shine-inhand-left
+      right:
+      - state: inhand-right
+        color: "#8c1eec"
+      - state: string-inhand-right
+      - state: shine-inhand-right
+
+- type: entity
+  parent: BaseBalloon
+  id: BalloonWhite
+  name: white balloon
+  description: A plain white balloon.
+  components:
+  - type: Sprite
+    sprite: _Impstation/Objects/Fun/balloons.rsi
+    layers:
+    - state: icon
+      color: "#e7e7e7"
+    - state: string-icon
+    - state: shine-icon
+    noRot: true
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#e7e7e7"
+      - state: string-inhand-left
+      - state: shine-inhand-left
+      right:
+      - state: inhand-right
+        color: "#e7e7e7"
+      - state: string-inhand-right
+      - state: shine-inhand-right
+
+- type: entity
+  parent: BaseBalloon
+  id: BalloonBlack
+  name: black balloon
+  description: A plain black balloon.
+  components:
+  - type: Sprite
+    sprite: _Impstation/Objects/Fun/balloons.rsi
+    layers:
+    - state: icon
+      color: "#202020"
+    - state: string-icon
+    - state: shine-icon
+    noRot: true
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#202020"
+      - state: string-inhand-left
+      - state: shine-inhand-left
+      right:
+      - state: inhand-right
+        color: "#202020"
+      - state: string-inhand-right
+      - state: shine-inhand-right

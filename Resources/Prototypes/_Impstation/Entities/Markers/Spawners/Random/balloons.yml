@@ -1,0 +1,22 @@
+- type: entity
+  name: Random Balloon Spawner
+  id: BalloonSpawner
+  parent: MarkerBase
+  components:
+    - type: Sprite
+      layers:
+        - state: red
+        - type: Sprite
+          sprite: _Impstation/Objects/Fun/balloons.rsi
+          layers:
+          - state: icon
+            color: "#eb0c07"
+          - state: string-icon
+          - state: shine-icon
+    - type: RandomSpawner
+      prototypes:
+      - BalloonRed
+      - BalloonBlue
+      - BalloonGreen
+      - BalloonYellow
+      - BalloonPurple

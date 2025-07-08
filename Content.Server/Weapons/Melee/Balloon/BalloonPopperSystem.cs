@@ -58,7 +58,7 @@ public sealed class BalloonPopperSystem : EntitySystem
         if (!Resolve(popper, ref component))
             return;
 
-        _audio.PlayPvs(component.PopSound, balloon);
+        _audio.PlayPvs(component.PopSound, Transform(balloon).Coordinates);
         _popup.PopupCoordinates(Loc.GetString("melee-balloon-pop",
             ("balloon", Identity.Entity(balloon, EntityManager))), Transform(balloon).Coordinates, PopupType.Large);
         QueueDel(balloon);
