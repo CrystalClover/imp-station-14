@@ -3,48 +3,18 @@
   id: BaseBalloon
   abstract: true
   components:
-  - type: ItemToggle
-    soundActivate:
-      path: /Audio/Weapons/ebladeon.ogg
-    soundDeactivate:
-      path: /Audio/Weapons/ebladeoff.ogg
-    onActivate: false
-    onUse: false
   - type: Appearance
-  - type: Sprite
-    sprite: _Impstation/Objects/Fun/balloons.rsi
-    layers:
-    - state: deflated
-      map: [ "enum.ToggleableVisuals.Layer" ]
-    - state: Shine
-      visible: false
-      map: [ "Details" ]
-    - state: String
-      visible: false
-      map: [ "Details" ]
-  - type: ComponentToggler
-    components:
-    - type: MovementIgnoreGravity
-      gravityState: true
-    - type: Physics
-      bodyStatus: InAir
-    - type: FloatingVisuals
-  - type: ToggleableVisuals
-    spriteLayer: enum.ToggleableVisuals.Layer
-  - type: GenericVisualizer
-    visuals:
-      enum.ToggleableVisuals.Enabled:
-        enum.ToggleableVisuals.Layer:
-          True: {state: inflated}
-          False: {state: deflated}
-        Details:
-          True: {visible: true}
-          False: {Visible: false}
   - type: Damageable
     damageContainer: Inorganic
   - type: Tag
     tags:
     - Balloon
+
+- type: entity
+  parent: BaseBalloon
+  id: BaseBalloonInflated
+  abstract: true
+  components:
   - type: MovementIgnoreGravity
     gravityState: true
   - type: Physics
@@ -54,35 +24,72 @@
 - type: entity
   parent: BaseBalloon
   id: BalloonRed
+  name: deflated red balloon
+  description: A deflated red balloon. Sad.
+  components:
+    - type: Sprite
+      sprite: _Impstation/Objects/Fun/balloons.rsi
+      layers:
+      - state: icon
+        color: "#eb0c07"
+      - state: shine-icon
+      - state: string-icon
+    - type: Item
+      inhandVisuals:
+        left:
+        - state: inhand-left
+          color: "#eb0c07"
+        - state: shine-inhand-left
+        - state: string-inhand-left
+        right:
+        - state: inhand-right
+          color: "#eb0c07"
+        - state: string-inhand-right
+        - state: shine-inhand-right
+    - type: SpawnItemsOnUse
+      items: 
+        - id: BalloonRedInflated
+      sound: 
+        path: /Audio/_Impstation/Effects/balloon_inflate.ogg
+
+- type: entity
+  parent: BaseBalloonInflated
+  id: BalloonRedInflated
   name: red balloon
   description: A plain red balloon.
   components:
-  - type: Sprite
-    sprite: _Impstation/Objects/Fun/balloons.rsi
-    layers:
-    - state: icon
-      color: "#eb0c07"
-    - state: string-icon
-    - state: shine-icon
-    noRot: true
-  - type: Item
-    inhandVisuals:
-      left:
-      - state: inhand-left
+    - type: Sprite
+      sprite: _Impstation/Objects/Fun/balloons.rsi
+      layers:
+      - state: inflated-icon
         color: "#eb0c07"
-      - state: string-inhand-left
-      - state: shine-inhand-left
-      right:
-      - state: inhand-right
-        color: "#eb0c07"
-      - state: string-inhand-right
-      - state: shine-inhand-right
+      - state: inflated-shine-icon
+      - state: inflated-string-icon
+      noRot: true
+    - type: Item
+      inhandVisuals:
+        left:
+        - state: inflated-inhand-left
+          color: "#eb0c07"
+        - state: inflated-shine-inhand-left
+        - state: inflated-string-inhand-left
+        right:
+        - state: inflated-inhand-right
+          color: "#eb0c07"
+        - state: inflated-string-inhand-right
+        - state: inflated-shine-inhand-right
+    - type: SpawnItemsOnUse
+      items: 
+        - id: BalloonRed
+      sound: 
+        path: /Audio/_Impstation/Effects/balloon_deflate.ogg
+
 
 - type: entity
   parent: BaseBalloon
   id: BalloonOrange
   name: orange balloon
-  description: A plain orange balloon.
+  description: A deflated orange balloon. Sad.
   components:
   - type: Sprite
     sprite: _Impstation/Objects/Fun/balloons.rsi
@@ -104,6 +111,41 @@
         color: "#ff7300"
       - state: string-inhand-right
       - state: shine-inhand-right
+  - type: SpawnItemsOnUse
+    items: 
+      - id: BalloonOrangeInflated
+    sound: 
+      path: /Audio/_Impstation/Effects/balloon_inflate.ogg
+
+- type: entity
+  parent: BaseBalloonInflated
+  id: BalloonOrangeInflated
+  name: orange balloon
+  description: A plain Orange balloon.
+  components:
+    - type: Sprite
+      sprite: _Impstation/Objects/Fun/balloons.rsi
+      layers:
+      - state: inflated-icon
+        color: "#ff7300"
+      - state: inflated-shine-icon
+      - state: inflated-string-icon
+      noRot: true
+    - type: Item
+      inhandVisuals:
+        left:
+        - state: inflated-inhand-left
+          color: "#ff7300"
+        - state: inflated-shine-inhand-left
+        - state: inflated-string-inhand-left
+        right:
+        - state: inflated-inhand-right
+          color: "#ff7300"
+        - state: inflated-string-inhand-right
+        - state: inflated-shine-inhand-right
+    - type: SpawnItemsOnUse
+      items: 
+        - id: BalloonOrange
 
 - type: entity
   parent: BaseBalloon

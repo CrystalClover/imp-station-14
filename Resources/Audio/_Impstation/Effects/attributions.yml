@@ -21,3 +21,13 @@
   license: "Custom"
   copyright: "Made by Widgetbeck"
   source: "https://github.com/impstation/imp-station-14/pull/2490"
+
+- files: ["balloon_inflate"]
+  license: "CC-BY-SA-3.0"
+  copyright: "By Terhen on freesound.org, modified by CrystalClover"
+  source: "https://freesound.org/people/Terhen/sounds/234186/"
+
+- files: ["balloon_deflate"]
+  license: "CC-BY-SA-3.0"
+  copyright: "By hareball101 on freesound.org, modified by CrystalClover"
+  source: "https://freesound.org/people/Terhen/sounds/234186/"
