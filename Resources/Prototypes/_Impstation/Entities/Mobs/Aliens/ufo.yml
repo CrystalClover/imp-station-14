@@ -1,0 +1,8 @@
+- type: entity
+  name: UFO
+  parent: [ SimpleSpaceMobBase, FlyingMobBase ]
+  id: MobMiniUfo
+  components:
+  - type: Sprite
+    drawdepth: SmallMobs
+    sprite: _Impstation/Mobs/Aliens/ufo.rsi
