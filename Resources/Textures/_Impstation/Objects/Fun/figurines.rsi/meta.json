@@ -132,6 +132,9 @@
         },
         {
             "name": "station_ai_unshaded"
+        },
+        {
+            "name": "bug"
         }
     ]
 }

@@ -370,3 +370,22 @@
       Gold: 100
   - type: SpeakOnTrigger
     pack: FigurinesFinfin
+
+- type: entity
+  parent: BaseFigurine
+  id: ToyFigurineBug
+  name: Bug figure
+  description: With authentic silk cloak and jumping action!
+  components:
+  - type: Sprite
+    sprite: _Impstation/Objects/Fun/figurines.rsi
+    state: bug
+  - type: PhysicalComposition
+    materialComposition:
+      Plastic: 90
+      Silk: 10
+  - type: SpeakOnTrigger
+    pack: FigurinesBug
+  - type: Speech
+    speechVerb: Arachnid
+    speechSounds: Arachnid

@@ -216,6 +216,10 @@ figurines-crewling-7 = We should stick together, there's monsters out there.
 figurines-crewling-8 = Help, someone help me. Help! Help. Help! Say it enough times and its just sounds waves things.
 figurines-crewling-9 = I'm not her but I could be.
 
+figurines-bug-1 = @jumps!
+figurines-bug-2 = Yay! Yay! Yay! Yay!
+figurines-bug-3 = I have a bomb.
+
 gnome-child-1 = ...you're not living, right?
 gnome-child-2 = A little inaccuracy sometimes saves tons of explanation!
 gnome-child-3 = A warning traveller! The new world will rise from the underground!
